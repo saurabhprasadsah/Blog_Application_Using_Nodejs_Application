@@ -19,12 +19,12 @@ router.post('/signin', async (req, res) => {
 
     } catch (error) {
         return res.render("signin", {
-            error: "Incorrect Email or password! "
+            error: "Incorrect Email or password!"
         })
     }
 })
 
-router.post('/signup', async (req, res) => {
+router.post('/signup', async(req, res) => {
     const { fullName, email, password } = req.body;
     await User.create({
         fullName,
