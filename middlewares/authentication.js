@@ -9,7 +9,7 @@ function checkForAuthenticationCookie(cookieName) {
         try {
             const userPaylaod = ValidateToken(tokenCookieValue);
             req.user = userPaylaod;
-        } catch (error) { }
+        } catch (error) {}
 
             return next();
     };
