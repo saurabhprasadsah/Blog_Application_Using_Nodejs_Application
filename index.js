@@ -19,8 +19,6 @@ app.set("views", path.resolve("./views"));
 
 
 
-
-
 app.use(express.urlencoded({extended: false }));
 app.use(cookiePaser());
 app.use(checkForAuthenticationCookie("token"));
@@ -32,7 +30,6 @@ app.get("/", (req, res) =>{
     });
 
 });
-
 
 
 app.use('/user', userRoute);
