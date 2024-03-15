@@ -12,7 +12,6 @@ router.get('/signup', (req, res) => {
     return res.render('signup')
 })
 
-
 router.post('/signin', async (req, res) => {
     const { email, password } = req.body;
     try {
@@ -32,10 +31,6 @@ router.get('/logout', (req,res) =>{
 })
 
 
-
-
-
-
 router.post('/signup', async (req, res) => {
     const { fullName, email, password } = req.body;
     await User.create({
@@ -45,8 +40,6 @@ router.post('/signup', async (req, res) => {
     });
     return res.redirect("/");
 });
-
-
 
 
 module.exports = router;
