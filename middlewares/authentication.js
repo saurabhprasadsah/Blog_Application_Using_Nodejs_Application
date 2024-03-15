@@ -13,6 +13,7 @@ function checkForAuthenticationCookie(cookieName) {
 
             return next();
     };
+    
 }
 
 
